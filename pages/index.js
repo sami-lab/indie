@@ -33,6 +33,7 @@ export default function Home() {
   const classes = useStyles();
   const theme = useTheme();
   const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
+  const matchesMD = useMediaQuery(theme.breakpoints.down('md'));
 
   return (
     <Grid container direction="column">
@@ -233,7 +234,10 @@ export default function Home() {
                       src={
                         'https://images.unsplash.com/photo-1616530940355-351fabd9524b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=435&q=80'
                       }
-                      style={{ height: '255px', width: '274px' }}
+                      style={{
+                        height: '255px',
+                        width: matchesMD ? '200px' : '274px',
+                      }}
                     />
                   </Grid>
                   <Grid item xs={10} style={{ marginTop: '1em' }}>
@@ -241,7 +245,10 @@ export default function Home() {
                       src={
                         'https://images.unsplash.com/photo-1568111561564-08726a1563e1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=508&q=80'
                       }
-                      style={{ height: '255px', width: '274px' }}
+                      style={{
+                        height: '255px',
+                        width: matchesMD ? '200px' : '274px',
+                      }}
                     />
                   </Grid>
                 </Grid>
